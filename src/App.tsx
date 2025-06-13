@@ -7,6 +7,9 @@
 // import CodingFactoryLogo from "./components/CodingFactoryLogo.tsx";
 
 import Layout from "./components/Layout.tsx";
+import {BrowserRouter, Routes, Route} from "react-router";
+import HomePage from "./pages/HomePage.tsx";
+import NameChangerPage from "./pages/NameChangerPage.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
 // import FunctionalComponent from "./components/FunctionalComponent.tsx";
@@ -18,7 +21,7 @@ import Layout from "./components/Layout.tsx";
 // import CounterWithCustomHookAdv from "./components/CounterWithCustomHookAdv.tsx";
 // import CounterWithReducer from "./components/CounterWithReducer.tsx";
 // import Todo from "./components/Todo/Todo.tsx";
-import OnlineStatus from "./components/OnlineStatus.tsx";
+// import OnlineStatus from "./components/OnlineStatus.tsx";
 
 function App() {
 
@@ -33,7 +36,7 @@ function App() {
         {/*                                       description = "This this the description of the component" />*/}
         {/*<CodingFactoryLogo/>*/}
 
-        <Layout>
+        {/*<Layout>*/}
             {/*<h1 className="text-center text-2xl font-bold"> This is the heading1 of the Layout </h1>*/}
             {/*<FunctionalComponent/>*/}
 
@@ -47,9 +50,20 @@ function App() {
             {/*<CounterWithCustomHookAdv />*/}
             {/*<CounterWithReducer />*/}
             {/*<Todo/>*/}
-            <OnlineStatus/>
+            {/*<OnlineStatus/>*/}
 
-        </Layout>
+        {/*</Layout>*/}
+
+        <BrowserRouter>
+            <Layout>
+                <Routes>
+                    {/*<Route index element={<HomePage/>} />*/}
+                    // ειναι το ιδιο με το path="/"
+                    <Route path="/" element={<HomePage/>} />
+                    <Route path="name-changer" element={<NameChangerPage/>} />
+                </Routes>
+            </Layout>
+        </BrowserRouter>
     </>
   )
 }
