@@ -12,6 +12,7 @@ import HomePage from "./pages/HomePage.tsx";
 import NameChangerPage from "./pages/NameChangerPage.tsx";
 import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
 import UserPage from "./pages/UserPage.tsx";
+import RouterLayout from "./components/RouterLayout.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
 // import FunctionalComponent from "./components/FunctionalComponent.tsx";
@@ -70,6 +71,12 @@ function App() {
                     </Route>
 
                     <Route path="users/:userId" element={<UserPage/>}/>
+
+                    {/*<Route path="files/*" element={<FilePage/>}/>*/}
+
+                    <Route element= {<RouterLayout/>}>
+                        <Route index element={<HomePage />}/>
+                    </Route>
 
                 </Routes>
             </Layout>
