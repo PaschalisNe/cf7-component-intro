@@ -10,6 +10,8 @@ import Layout from "./components/Layout.tsx";
 import {BrowserRouter, Routes, Route} from "react-router";
 import HomePage from "./pages/HomePage.tsx";
 import NameChangerPage from "./pages/NameChangerPage.tsx";
+import OnlineStatusPage from "./pages/OnlineStatusPage.tsx";
+import UserPage from "./pages/UserPage.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
 // import FunctionalComponent from "./components/FunctionalComponent.tsx";
@@ -61,6 +63,14 @@ function App() {
                     // ειναι το ιδιο με το path="/"
                     <Route path="/" element={<HomePage/>} />
                     <Route path="name-changer" element={<NameChangerPage/>} />
+
+                    <Route path="examples">
+                        <Route path="name-changer" element={<NameChangerPage/>} />
+                        <Route path="online-status" element={<OnlineStatusPage/>} />
+                    </Route>
+
+                    <Route path="users/:userId" element={<UserPage/>}/>
+
                 </Routes>
             </Layout>
         </BrowserRouter>
