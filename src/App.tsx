@@ -17,6 +17,7 @@ import ExamplesPage from "./pages/ExamplesPage.tsx";
 import RouterExamplesLayout from "./components/RouterExamplesLayout.tsx";
 import AutoRedirectPage from "./pages/AutoRedirectPage.tsx";
 import AutoRedirectAdvancedPage from "./pages/AutoRedirectAdvancedPage.tsx";
+import MultiFieldForm from "./components/MultiFieldForm.tsx";
 // import NameChanger from "./components/NameChanger.tsx";
 // import CounterWithMoreStates from "./components/CounterWithMoreStates.tsx";
 // import FunctionalComponent from "./components/FunctionalComponent.tsx";
@@ -66,7 +67,8 @@ function App() {
                 <Routes>
 
                     <Route element= {<RouterLayout/>}>
-                        <Route index element={<HomePage />}/>
+                        {/*<Route index element={<HomePage />}/>*/}
+                        <Route index element={<MultiFieldForm/>} />
                     </Route>
 
                     {/*<Route index element={<HomePage/>} />*/}
